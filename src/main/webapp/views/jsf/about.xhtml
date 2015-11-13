@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+    <h2>This is about</h2>
+    <h:form>
+        <h:commandButton action="home?faces-redirect=true"
+                         value="Back To Home Page" />
+
+
+
+        <h:commandButton action="showMessage" value="Click Me">
+
+            <f:setPropertyActionListener
+                    target="#{message.message}" value="JSF 2.0 User" />
+
+        </h:commandButton>
+
+    </h:form>
+
+    <h:link value="show message" outcome="showMessage" />
+</h:body>
+</html>
