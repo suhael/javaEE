@@ -3,5 +3,6 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/servletLib" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servletLib/src/main/java/com/suhael/javaEE/lib/TestServlet.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/servletLib/src/main/resources/META-INF/beans.xml" charset="windows-1252" />
   </component>
 </project>
