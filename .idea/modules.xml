@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javaEE.iml" filepath="$PROJECT_DIR$/javaEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servletLib/servletLib.iml" filepath="$PROJECT_DIR$/servletLib/servletLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webProject/webProject.iml" filepath="$PROJECT_DIR$/webProject/webProject.iml" />
     </modules>
   </component>
 </project>
-
