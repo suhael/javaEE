@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaxwsServer:war">
+    <output-path>$PROJECT_DIR$/jaxwsServer/target</output-path>
+    <root id="archive" name="jaxwsServer.war">
+      <element id="artifact" artifact-name="jaxwsServer:war exploded" />
+    </root>
+  </artifact>
+</component>
