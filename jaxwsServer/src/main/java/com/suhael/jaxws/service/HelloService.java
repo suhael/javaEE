@@ -1,12 +1,11 @@
 package com.suhael.jaxws.service;
 
-import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
 @WebService(serviceName = "HelloService")
-@Stateless()
+//@Stateless()
 public class HelloService {
 
     /**

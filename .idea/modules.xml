@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javaEE.iml" filepath="$PROJECT_DIR$/javaEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxwsAPI/jaxwsAPI.iml" filepath="$PROJECT_DIR$/jaxwsAPI/jaxwsAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxwsClient/jaxwsClient.iml" filepath="$PROJECT_DIR$/jaxwsClient/jaxwsClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/jaxwsServer/jaxwsServer.iml" filepath="$PROJECT_DIR$/jaxwsServer/jaxwsServer.iml" />
     </modules>
   </component>
