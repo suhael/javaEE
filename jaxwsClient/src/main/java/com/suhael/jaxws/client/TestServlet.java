@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.WebServiceRef;
+
+import com.suhael.jaxws.client.handler.MyClientHandlerResolver;
+import com.suhael.jaxws.service.HelloService;
 import com.suhael.jaxws.service.HelloService_Service;
 
 /**
@@ -16,10 +19,10 @@ import com.suhael.jaxws.service.HelloService_Service;
  */
 @WebServlet(name = "TestServlet", urlPatterns = {"/TestServlet"})
 public class TestServlet extends HttpServlet {
-
-    @WebServiceRef(wsdlLocation = "http://localhost:7001/jaxwsServer/HelloService?wsdl")
-//    private HelloS
-    private HelloService_Service service;
+//
+//    @WebServiceRef(wsdlLocation = "http://localhost:7001/jaxwsServer/HelloService?wsdl")
+////    private HelloS
+//    private HelloService_Service service;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,8 +36,12 @@ public class TestServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String hello = hello("suhael");
+//        String hello = hello("suhael");
 //        String hello = "suhael";
+        HelloService_Service service = new HelloService_Service();
+        service.setHandlerResolver(new MyClientHandlerResolver());
+        HelloService port = service.getHelloServicePort();
+        String hello = port.hello("ameera");
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -90,11 +97,11 @@ public class TestServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private String hello(java.lang.String name) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        com.suhael.jaxws.service.HelloService port = service.getHelloServicePort();
-        return port.hello(name);
-    }
+//    private String hello(java.lang.String name) {
+//        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+//        // If the calling of port operations may lead to race condition some synchronization is required.
+//        com.suhael.jaxws.service.HelloService port = service.getHelloServicePort();
+//        return port.hello(name);
+//    }
 
 }
