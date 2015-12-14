@@ -1,7 +1,5 @@
 package suhael.service.rest;
 
-import com.suhael.model.TemplateData;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -28,13 +26,9 @@ public class TemplateController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
     @Path("data")
     public Response getData(){
-        TemplateData templateData = new TemplateData();
-        templateData.setTitle("page title");
-        templateData.setFooter("This footer is from the json response ");
-//        return templateData;
+        String templateData = "hello";
 
         return Response
                 .status(200)

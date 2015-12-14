@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 public class PersonRestController {
 
     @GET
-    public String getPerson(){
-        return "Person";
+    public Person getPerson(){
+        return new Person();
     }
 
 }
