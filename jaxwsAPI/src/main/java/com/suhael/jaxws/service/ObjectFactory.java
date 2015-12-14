@@ -24,8 +24,15 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Hello_QNAME = new QName("http://service.jaxws.suhael.com/", "hello");
-    private final static QName _HelloResponse_QNAME = new QName("http://service.jaxws.suhael.com/", "helloResponse");
+    private final static QName _Delete_QNAME = new QName("http://service.jaxws.suhael.com/", "delete");
+    private final static QName _CreateResponse_QNAME = new QName("http://service.jaxws.suhael.com/", "createResponse");
+    private final static QName _Read_QNAME = new QName("http://service.jaxws.suhael.com/", "read");
+    private final static QName _ReadResponse_QNAME = new QName("http://service.jaxws.suhael.com/", "readResponse");
+    private final static QName _Create_QNAME = new QName("http://service.jaxws.suhael.com/", "create");
+    private final static QName _Update_QNAME = new QName("http://service.jaxws.suhael.com/", "update");
+    private final static QName _DeleteResponse_QNAME = new QName("http://service.jaxws.suhael.com/", "deleteResponse");
+    private final static QName _CustomException_QNAME = new QName("http://service.jaxws.suhael.com/", "CustomException");
+    private final static QName _UpdateResponse_QNAME = new QName("http://service.jaxws.suhael.com/", "updateResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.suhael.jaxws.service
@@ -35,37 +42,156 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HelloResponse }
+     * Create an instance of {@link Delete }
      * 
      */
-    public HelloResponse createHelloResponse() {
-        return new HelloResponse();
+    public Delete createDelete() {
+        return new Delete();
     }
 
     /**
-     * Create an instance of {@link Hello }
+     * Create an instance of {@link CreateResponse }
      * 
      */
-    public Hello createHello() {
-        return new Hello();
+    public CreateResponse createCreateResponse() {
+        return new CreateResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Hello }{@code >}}
+     * Create an instance of {@link CustomException }
      * 
      */
-    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "hello")
-    public JAXBElement<Hello> createHello(Hello value) {
-        return new JAXBElement<Hello>(_Hello_QNAME, Hello.class, null, value);
+    public CustomException createCustomException() {
+        return new CustomException();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HelloResponse }{@code >}}
+     * Create an instance of {@link Read }
      * 
      */
-    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "helloResponse")
-    public JAXBElement<HelloResponse> createHelloResponse(HelloResponse value) {
-        return new JAXBElement<HelloResponse>(_HelloResponse_QNAME, HelloResponse.class, null, value);
+    public Read createRead() {
+        return new Read();
+    }
+
+    /**
+     * Create an instance of {@link Create }
+     * 
+     */
+    public Create createCreate() {
+        return new Create();
+    }
+
+    /**
+     * Create an instance of {@link DeleteResponse }
+     * 
+     */
+    public DeleteResponse createDeleteResponse() {
+        return new DeleteResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResponse }
+     * 
+     */
+    public UpdateResponse createUpdateResponse() {
+        return new UpdateResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadResponse }
+     * 
+     */
+    public ReadResponse createReadResponse() {
+        return new ReadResponse();
+    }
+
+    /**
+     * Create an instance of {@link Update }
+     * 
+     */
+    public Update createUpdate() {
+        return new Update();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "delete")
+    public JAXBElement<Delete> createDelete(Delete value) {
+        return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "createResponse")
+    public JAXBElement<CreateResponse> createCreateResponse(CreateResponse value) {
+        return new JAXBElement<CreateResponse>(_CreateResponse_QNAME, CreateResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Read }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "read")
+    public JAXBElement<Read> createRead(Read value) {
+        return new JAXBElement<Read>(_Read_QNAME, Read.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "readResponse")
+    public JAXBElement<ReadResponse> createReadResponse(ReadResponse value) {
+        return new JAXBElement<ReadResponse>(_ReadResponse_QNAME, ReadResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Create }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "create")
+    public JAXBElement<Create> createCreate(Create value) {
+        return new JAXBElement<Create>(_Create_QNAME, Create.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "update")
+    public JAXBElement<Update> createUpdate(Update value) {
+        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "deleteResponse")
+    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
+        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CustomException }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "CustomException")
+    public JAXBElement<CustomException> createCustomException(CustomException value) {
+        return new JAXBElement<CustomException>(_CustomException_QNAME, CustomException.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.jaxws.suhael.com/", name = "updateResponse")
+    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
+        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
     }
 
 }

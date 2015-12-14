@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="jaxwsServer" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/jaxwsServer/target/jaxwsServer/META-INF/MANIFEST.MF" />

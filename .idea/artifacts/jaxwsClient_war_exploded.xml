@@ -10,6 +10,7 @@
           <element id="archive" name="jaxwsAPI-1.0.0-SNAPSHOT.jar">
             <element id="module-output" name="jaxwsAPI" />
           </element>
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">

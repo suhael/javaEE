@@ -47,6 +47,7 @@
                 <packageName>com.suhael.jaxws.service</packageName>
                 <wsdlUrls>
                     <wsdlUrl>http://localhost:7001/jaxwsServer/HelloService?WSDL</wsdlUrl>
+                    <wsdlUrl>http://localhost:7001/jaxwsServer/CRUDSoapService?WSDL</wsdlUrl>
                 </wsdlUrls>
                 <verbose>true</verbose>
                 <keep>true</keep>

@@ -1,17 +1,17 @@
 package com.suhael.jaxws.client;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.suhael.jaxws.client.handler.ClientHandlerResolver;
+import com.suhael.jaxws.client.handler.MyClientHandlerResolver;
+import com.suhael.jaxws.service.CRUDSoap;
+import com.suhael.jaxws.service.CRUDSoapService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.WebServiceRef;
-
-import com.suhael.jaxws.client.handler.MyClientHandlerResolver;
-import com.suhael.jaxws.service.HelloService;
-import com.suhael.jaxws.service.HelloService_Service;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -38,10 +38,16 @@ public class TestServlet extends HttpServlet {
 
 //        String hello = hello("suhael");
 //        String hello = "suhael";
-        HelloService_Service service = new HelloService_Service();
-        service.setHandlerResolver(new MyClientHandlerResolver());
-        HelloService port = service.getHelloServicePort();
-        String hello = port.hello("ameera");
+//        HelloService_Service service = new HelloService_Service();
+//        service.setHandlerResolver(new MyClientHandlerResolver());
+//        HelloService port = service.getHelloServicePort();
+//        String hello = port.hello("ameera");
+//
+        CRUDSoapService crudService = new CRUDSoapService();
+        crudService.setHandlerResolver(new ClientHandlerResolver("operation name", "secretKeyIsNotMe"));
+        CRUDSoap port2 = crudService.getCRUDSoapPort();
+        String hello = port2.create();
+
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
